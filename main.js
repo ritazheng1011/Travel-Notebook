@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // We can worry about the JS towards the end
 
 // testing map usage, trying to figure how to make a map appear with APIs
@@ -70,3 +71,7 @@ getLocBtn.addEventListener("click", () => {
     }
   );
 });
+=======
+// creating a new log
+
+>>>>>>> e7df62ec564b9ada25d6f302701cb72c518e4570

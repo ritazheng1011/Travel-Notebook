@@ -17,11 +17,12 @@
   </head>
 
   <body>
-    <button id="editPageBtn" class="edit-page-btn">Edit Page</button>
+
+   <!-- Adding an image banner and including the Title, Location, and Dates inside  -->
     <div class="Log">
-      <div class="top-section">
-        <div class="title-wrapper">
-          <input
+        <div class="banner-container">
+          <div class="banner-content">
+             <input
             type="text"
             id="titleInput"
             class="trip-title"
@@ -42,12 +43,27 @@
             placeholder="Dates of Trip"
             disabled
           />
+          <button id="addBannerBtn" class="add-banner-btn">
+          + Add Photo Banner
+        </button>
+      </div>
+          <input
+          type="file"
+          id="mainPhotoInput"
+          accept="image/*"
+          multiple
+          style="display: none"
+        />
+          </div>
         </div>
+    </div>
 
         <div class="main-image">
           <img src="main-photo.jpg" alt="Main trip photo" />
         </div>
       </div>
+
+       <button id="editPageBtn" class="edit-page-btn">Edit Page</button>
 
       <div class="log-wrapper">
         <h2>Notes</h2>
@@ -83,7 +99,7 @@
           </div>
         </div>
 
-        <button id="addMorePhotosBtn" class="add-more-photos-btn">
+        <button id="addPhotosBtn" class="add-photos-btn">
           + Add More Photos
         </button>
       </div>
@@ -96,7 +112,7 @@
           placeholder="Type your itinerary..."
           disabled
         ></textarea>
-        <br />
+        <br /> <!-- Maybe we can add a feature to share the itinerary/page with people going on the trip together-->
         <button id="shareItineraryBtn" class="share-itinerary-btn">
           Share Itinerary
         </button>
@@ -104,10 +120,10 @@
 
       <div class="map-integration">
         <h2>Map</h2>
-        <div id="map" class="placeholder-box">Map will appear here</div>
+        <div id="map" class="placeholder-box">Map will appear here if we get it to work..</div>
 
         <div class="location-section">
-          <button id="getLocationBtn">Use My Location</button>
+          <button id="getLocationBtn">Search My Location</button>
           <p id="locationStatus"></p>
           <div id="locationDisplay"></div>
         </div>
