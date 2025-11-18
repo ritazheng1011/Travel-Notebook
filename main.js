@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // We can worry about the JS towards the end
 
 // testing map usage, trying to figure how to make a map appear with APIs
@@ -71,7 +70,10 @@ getLocBtn.addEventListener("click", () => {
     }
   );
 });
-=======
-// creating a new log
 
->>>>>>> e7df62ec564b9ada25d6f302701cb72c518e4570
+const openPage2 = () =>
+{
+    console.log("BUTTON");
+    window.location.href= "./page2.html";
+}
+document.querySelector(".create-new").addEventListener("click", openPage2);

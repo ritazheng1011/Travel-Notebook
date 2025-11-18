@@ -181,7 +181,10 @@ button {
     border:#274C77;
     border-width: 5px;
     border-style: solid;
-    justify-content: center;
+    width: 80%;
+    height: 30em;
+    margin: auto;
+    margin-top: 15vh;
 }
 
 .log-wrapper{
