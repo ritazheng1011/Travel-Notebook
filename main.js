@@ -1,12 +1,10 @@
 // We can worry about the JS towards the end
 
-const openPage2 = () =>
-{
-    console.log("BUTTON");
-    window.location.href= "./page2.html";
-}
+const openPage2 = () => {
+  console.log("BUTTON");
+  window.location.href = "./page2.html";
+};
 document.querySelector(".create-new").addEventListener("click", openPage2);
-
 
 // testing map usage, trying to figure how to make a map appear with APIs
 const editBtn = document.querySelector("#editPageBtn");

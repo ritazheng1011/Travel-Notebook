@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="./main.js"></script>
+    <title>Travel log details</title>
+  </head>
+
+  <body>
+    <div class="Log">
+      <button id="editLogBtn" class="edit-page-btn">Edit Log</button>
+
+      <div class="banner-container">
+        <div class="banner-content">
+          <h1 id="titleDisplay" class="trip-title">Trip Title</h1>
+          <p id="locationDisplayTop" class="trip-location">Location</p>
+          <p id="datesDisplay" class="trip-dates">Dates</p>
+        </div>
+      </div>
+
+      <div class="top-section">
+        <div class="log-wrapper">
+          <h2 class="log-title">Notes</h2>
+          <div id="notesDisplay" class="notes-textarea"></div>
+        </div>
+      </div>
+
+      <div class="photo-gallery">
+        <div class="photo-title">
+          <h2>Photos</h2>
+        </div>
+        <div class="photos-box">
+          <div class="photos" id="photoDisplay"></div>
+        </div>
+      </div>
+
+      <div class="itinerary">
+        <h2>Itinerary</h2>
+        <div id="itineraryDisplay" class="itinerary-textarea"></div>
+      </div>
+    </div>
+  </body>
+</html>
