@@ -20,104 +20,82 @@
 
    <!-- Adding an image banner and including the Title, Location, and Dates inside  -->
     <div class="Log">
-             <button class="back-button" onclick="history.back()">Back</button>
-
         <div class="banner-container">
+          <button class="back-button" onclick="history.back()">Back</button>
           <div class="banner-content">
-             <input
-            type="text"
-            id="titleInput"
-            class="trip-title"
-            placeholder="Trip Title"
-            disabled
-          />
-          <input
-            type="text"
-            id="locationInput"
-            class="trip-location"
-            placeholder="Location Name"
-            disabled
-          />
-          <input
-            type="text"
-            id="datesInput"
-            class="trip-dates"
-            placeholder="Dates of Trip"
-            disabled
-          />
-          <button id="addBannerBtn" class="add-banner-btn">
-          + Add Photo Banner
-        </button>
+            <input
+              type="text"
+              id="titleInput"
+              class="trip-title"
+              placeholder="Trip Title"
+            />
+            <input
+              type="text"
+              id="locationInput"
+              class="trip-location"
+              placeholder="Location Name"
+            />
+            <input
+              type="text"
+              id="datesInput"
+              class="trip-dates"
+              placeholder="Dates of Trip"
+            />
+            <button id="addBannerBtn" class="add-banner-btn">
+            + Add Photo Banner
+          </button>
+        </div>
       </div>
+
+      <div class="fields">
+         <div class="note-wrapper box">
+          <h2>Notes</h2>
+          <textarea
+            id="notesInput"
+            class="notes-textarea"
+            placeholder="Write your notes..."
+          ></textarea>
+        </div>
+
+        <div class="photo-gallery box">
+          <h2>Photo Gallery</h2>
           <input
-          type="file"
-          id="mainPhotoInput"
-          accept="image/*"
-          multiple
-          style="display: none"
-        />
+            type="file"
+            id="photoInput"
+            accept="image/*"
+            multiple
+            style="display: none"
+          />
+          <div class="photos-box">
+            <div class="photos" id="photoDisplay">
+              <div><img src="photo1.jpg" alt="photo 1" /></div>
+              <div><img src="photo2.jpg" alt="photo 2" /></div>
+              <div><img src="photo3.jpg" alt="photo 3" /></div>
+              <div><img src="photo4.jpg" alt="photo 4" /></div>
+              <div><img src="photo5.jpg" alt="photo 5" /></div>
+              <div><img src="photo6.jpg" alt="photo 6" /></div>
+              <div><img src="photo7.jpg" alt="photo 7" /></div>
+              <div><img src="photo8.jpg" alt="photo 8" /></div>
+            </div>
           </div>
-        </div>
-    </div>
-
-        <div class="main-image">
-          <img src="main-photo.jpg" alt="Main trip photo" />
-        </div>
-      </div>
-      
-      <div class="log-wrapper">
-        <h2>Notes</h2>
-        <textarea
-          id="notesInput"
-          class="notes-textarea"
-          placeholder="Write your notes..."
-          disabled
-        ></textarea>
-      </div>
-
-      <div class="photo-gallery">
-        <h2>Photo Gallery</h2>
-
-        <input
-          type="file"
-          id="photoInput"
-          accept="image/*"
-          multiple
-          style="display: none"
-        />
-
-        <div class="photos-box">
-          <div class="photos" id="photoDisplay">
-            <div><img src="photo1.jpg" alt="photo 1" /></div>
-            <div><img src="photo2.jpg" alt="photo 2" /></div>
-            <div><img src="photo3.jpg" alt="photo 3" /></div>
-            <div><img src="photo4.jpg" alt="photo 4" /></div>
-            <div><img src="photo5.jpg" alt="photo 5" /></div>
-            <div><img src="photo6.jpg" alt="photo 6" /></div>
-            <div><img src="photo7.jpg" alt="photo 7" /></div>
-            <div><img src="photo8.jpg" alt="photo 8" /></div>
-          </div>
-        </div>
 
         <button id="addPhotosBtn" class="add-photos-btn">
           + Add More Photos
         </button>
       </div>
 
-      <div class="itinerary">
+      <div class="itinerary box">
         <h2>Itinerary</h2>
         <textarea
           id="itineraryInput"
           class="itinerary-textarea"
           placeholder="Type your itinerary..."
-          disabled
-        ></textarea>
-        <br /> <!-- Maybe we can add a feature to share the itinerary/page with people going on the trip together-->
+        ></textarea>        
         <button id="shareItineraryBtn" class="share-itinerary-btn">
           Share Itinerary
         </button>
       </div>
-
+<!-- 
       <div class="map-integration">
         <h2>Map</h2>
         <div id="map" class="placeholder-box">Map will appear here if we get it to work..</div>
@@ -127,11 +105,16 @@
           <p id="locationStatus"></p>
           <div id="locationDisplay"></div>
         </div>
+      </div> -->
       </div>
 
-      <button id="saveEntryBtn" class="save-entry-btn">
+     <div class="save-entry">
+       <button id="saveEntryBtn" class="save-entry-btn">
         Save Entry
       </button>
+     </div>
+    </div>
+        </div>
     </div>
   </body>
 </html>
