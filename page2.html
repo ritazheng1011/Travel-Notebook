@@ -12,6 +12,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="./storage.js"></script>
     <script type="module" src="./main2.js"></script>
     <title>Travel Log Entry</title>
   </head>
@@ -22,23 +23,24 @@
     <div class="Log">
         <div class="banner-container">
           <button class="back-button" onclick="history.back()">Back</button>
+
           <div class="banner-content">
             <input
               type="text"
               id="titleInput"
-              class="trip-title"
+              class="title-input"
               placeholder="Trip Title"
             />
             <input
               type="text"
               id="locationInput"
-              class="trip-location"
+              class="data-input"
               placeholder="Location Name"
             />
             <input
               type="text"
               id="datesInput"
-              class="trip-dates"
+              class="data-input"
               placeholder="Dates of Trip"
             />
             <button id="addBannerBtn" class="add-banner-btn">
@@ -88,7 +90,7 @@
         <h2>Itinerary</h2>
         <textarea
           id="itineraryInput"
-          class="itinerary-textarea"
+          class="data-input"
           placeholder="Type your itinerary..."
         ></textarea>        
         <button id="shareItineraryBtn" class="share-itinerary-btn">
