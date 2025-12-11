@@ -1,13 +1,9 @@
 // We can worry about the JS towards the end
-import { savingData, retrievingData, addingData } from "./storage";
+import { retrievingData } from "./storage.js";
 
-document.querySelector(".create-new").addEventListener("click", openPage2);
-document.querySelector(".open-log").addEventListener("click", openPage3);
+// document.querySelector(".create-new").addEventListener("click", openPage2);
+// document.querySelector(".open-log").addEventListener("click", openPage3);
 
-window.addEventListener("load", function(event) {
-    console.log("Page is fully loaded or refreshed");
-    createLog();
-});
 // everytime the page loads, read LocalStorage and rerender log displays...
 
 
@@ -18,22 +14,20 @@ window.addEventListener("load", function(event) {
 // }
 
 
-const openPage3 = () =>
-{
-    console.log("BUTTON");
-    window.location.href= "./page3.html";
-}
-
-const createLog = () =>{
-    //adds log
-}
+// const openPage3 = () =>
+// {
+//     console.log("BUTTON");
+//     window.location.href= "./page3.html";
+// }
 
 window.addEventListener("DOMContentLoaded", function(){
      //When dom loads, look through atabase and populatate logs
      const db = retrievingData();
-
+     console.log("Hello");
      db.forEach(element => {
-        console.log("jhdfjds");
+        var el = `<log-display title="${db[0].title}" date="${db[0].dates}"></log-display>`;
+        document.getElementById("log-wrapper").innerHTML += el;
+        console.log("Hello!");
      });
 })
    

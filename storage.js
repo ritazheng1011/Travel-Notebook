@@ -24,15 +24,17 @@ export const addingData = () =>
 
 //actually writing data to memory
 export const savingData = (data) => { 
-    const db = retrievingData();
+    const db = retrievingData(); //needs to retrieve the list in order to append new data to it
     db.push(data);
-    localStorage.setItem("database", JSON.stringify(db));
+    localStorage.setItem("database", JSON.stringify(db)); //put it back
 };
 
 export const retrievingData = () => {
-   const dataBase = localStorage.getItem("database") || [];
+   const database = localStorage.getItem("database") || '[]';
+   // issue is before parsing, parsing cannot continue because something isnt formatted as JSON
+   console.log(database);
     return JSON.parse(database);
-};
+    };
 
 if (document.querySelector(".save-entry")){
         console.log("save");

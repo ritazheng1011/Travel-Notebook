@@ -83,5 +83,6 @@ export class LogDisplay extends LitElement {
     `;
   }
 }
+
 customElements.define('log-display', LogDisplay);
 
