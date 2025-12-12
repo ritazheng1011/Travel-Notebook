@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- maps integration -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="module" src="./main3.js"></script>
     <title>Travel log details</title>
   </head>
 
   <body>
     <div class="Log">
-      <button class="edit-page-btn">Edit Log</button>
-      <button class="back-button" onclick="history.back()">Back</button>
-
+      <button id="editLogBtn" class="edit-page-btn">Edit Log</button>
+      <!-- <button id="backBtnPage3" class="back-btn" onclick="history.back()">
+        Back
+      </button> -->
+      <button id="backBtnPage3" class="back-btn">Back</button>
 
       <div class="banner-container">
         <div class="banner-content">
@@ -41,6 +49,19 @@
       <div class="itinerary">
         <h2>Itinerary</h2>
         <div id="itineraryDisplay" class="itinerary-textarea"></div>
+      </div>
+    </div>
+
+    <div class="itinerary">
+      <h2>Itinerary</h2>
+      <div id="itineraryDisplay" class="itinerary-textarea"></div>
+    </div>
+
+    <!-- Map section on view page -->
+    <div class="map-integration">
+      <h2>Map</h2>
+      <div id="mapView" class="placeholder-box">
+        Map will appear here if we get it to work..
       </div>
     </div>
   </body>
