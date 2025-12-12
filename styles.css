@@ -1,14 +1,14 @@
 /* universal */
-.back-button{
-  background-color: #274C77;
+.back-button {
+  background-color: #274c77;
   color: white;
   margin: 1em;
 }
 
 /* For index.html (Home Page) */
-*{
-    font-family:'Courier New', Courier, monospace;
-    background-color: #E7ECEF;
+* {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #e7ecef;
 }
 
 
@@ -21,9 +21,7 @@
         ". title new-log-wrapper"
         ". log-wrapper new-log-wrapper"
         ". . ."; 
-    border:#274C77;
-    border-width: 5px;
-    border-style: solid;
+    border:5px solid #274C77;
     width: 80%;
     height: 30em;
     margin: auto;
@@ -31,77 +29,76 @@
     min-width: 500px;
 }
 
-.log-wrapper{
-    grid-area: log-wrapper;
-    border-top:#274C77;
-    border-top-style: solid;
-    border-width: .2em;
-    padding: 5px;
+.log-wrapper {
+  grid-area: log-wrapper;
+  border-top: #274c77;
+  border-top-style: solid;
+  border-width: 0.2em;
+  padding: 5px;
 }
 
-.new-log-wrapper{
-    grid-area: new-log-wrapper;
-    text-align: center;
-    justify-items: center;
-    border-left:#274C77;
-    border-left-style: solid;
-    border-width: .4em;
+.new-log-wrapper {
+  grid-area: new-log-wrapper;
+  text-align: center;
+  justify-items: center;
+  border-left: #274c77;
+  border-left-style: solid;
+  border-width: 0.4em;
 }
 
-.title{
-    grid-area: title;
-    padding-left: 1em;
+.title {
+  grid-area: title;
+  padding-left: 1em;
 }
 
-.create-new{
-    position: relative;
-    top: 40%;
-    background-color: #274C77;
-    color: #E7ECEF;
-    font-size: 3em;
-    width: 1.2em;
-    text-align: center;
-    border-radius: 1em;
+.create-new {
+  position: relative;
+  top: 40%;
+  background-color: #274c77;
+  color: #e7ecef;
+  font-size: 3em;
+  width: 1.2em;
+  text-align: center;
+  border-radius: 1em;
 }
 
-.create-new:hover{
+.create-new:hover {
   background-color: rgb(87, 20, 15);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .log-wrapper {
   grid-area: log-wrapper;
   overflow: scroll;
-  
 }
 button {
   margin: auto;
 }
 
-
 /* page 2: (New Log Page) */
 
 .Log {
-    gap: 0px 0px; 
-    border:#274C77;
-    border-width: 5px;
-    border-style: solid;
-    width: 80%;
-    height: 85vh;
-    margin: auto;
-    margin-top: 5vh;
-    min-width: 500px;
-    overflow-y: scroll;
-    overflow-x: hidden
+  gap: 0px 0px;
+  border: #274c77;
+  border-width: 5px;
+  border-style: solid;
+  width: 80%;
+  height: 85vh;
+  margin: auto;
+  margin-top: 5vh;
+  min-width: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .banner-container {
-  background-image: url('./main-photo.jpg') ;  margin-bottom: 20px;
+  background-image: url("./main-photo.jpg");
+  margin-bottom: 20px;
   overflow: hidden;
   padding: 1em 0 1em 1em;
   margin-bottom: 0;
 }
 
-.box{
+.box {
   width: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -144,7 +141,7 @@ button {
   color: #000;
 } */
 
-.banner-content{
+.banner-content {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -152,14 +149,6 @@ button {
   gap: 6px;
 }
 
-.banners{
-  display: flex;
-}
-
-.banner-input{
-  float: left;
-  width: 70%;
-}
 
 .add-banner-btn{
   float: right;
@@ -256,5 +245,14 @@ button {
   color: #000;
 }
 
+#map,
+#mapView {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* for page3: (View Log Page) */
 
 /* Media Queries */

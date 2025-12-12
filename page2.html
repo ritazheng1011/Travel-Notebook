@@ -12,6 +12,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    
+    <!-- maps integration  -->
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
     <script type="module" src="./main2.js"></script>
     <title>Travel Log Entry</title>
   </head>
@@ -42,13 +51,13 @@
               placeholder="Dates of Trip"
             />
             <div class="banners">
-              <button id="addBannerBtn" class="add-banner-btn">
+              <!-- <button id="addBannerBtn" class="add-banner-btn">
             + Add Photo Banner
-            </button>
+            </button> -->
              <input
               type="text"
               id="banner"
-              class="banner-input"
+              class="data-input"
               placeholder="Banner URL here. . ."
             />
             </div>
@@ -102,7 +111,8 @@
           Share Itinerary
         </button>
       </div>
-<!-- 
+
+      <!-- maps integration -->
       <div class="map-integration">
         <h2>Map</h2>
         <div id="map" class="placeholder-box">Map will appear here if we get it to work..</div>
@@ -112,8 +122,9 @@
           <p id="locationStatus"></p>
           <div id="locationDisplay"></div>
         </div>
-      </div> -->
       </div>
+      </div>
+    </div>
 
      <div class="save-entry">
        <button id="saveEntryBtn" class="save-entry-btn">
