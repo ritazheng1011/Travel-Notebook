@@ -18,13 +18,13 @@ export class LogDisplay extends LitElement {
   static styles = css`
     .log-title{
         background-color: transparent;
-        padding-left: 10px;
+        padding-left: 20px;
         font-size: 20px;
         font-weight: bold;
         margin-top: 10px;
         margin-bottom: 5px;
         color: rgb(15, 30, 82);
-        
+
     }
     .log-date{
         position: absolute;
@@ -45,6 +45,7 @@ export class LogDisplay extends LitElement {
 
     .open-log{
         float: right;
+        color: #bed2e9;
         border-radius: 100%;
         width: 2rem;
         height: 2rem;
@@ -56,19 +57,28 @@ export class LogDisplay extends LitElement {
         border-color: transparent;
         background-color:#274C77;
         color:white;
+        transition: .3s;
     }
     .open-log:hover{
-        background-color: #2394c1;
-        transition: .3s;
+        background-color:rgb(51, 118, 173);
+        height: 75%;
+        font-size: 2em;
+        border-radius: 0;
+        margin-top: 80px;
+        width: 4rem;
+        right: 0;
+        cursor: pointer;
+        transform: translate(0, -50%);
+        transition: all .3s ease-in-out;
     }
 
     .log-display{
-        background-color: rgb(169, 182, 200);
+        background-color: #bed2e9;
         overflow: hidden;
-        width: 100%;
+        width: 97%;
         height: 150px;
         display: flow-root;
-        margin-top: 1em;
+        margin: 1em auto auto auto;
         position: relative;
         border-radius: 20px 0px 20px 20px;
     }
