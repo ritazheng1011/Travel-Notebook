@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // When user clicks "Search My Location"
   getLocBtn.addEventListener("click", function () {
     // Check if browser supports geolocation
+    console.log("SEARCH PRESSED");
     if (!navigator.geolocation) {
       locStatus.textContent = "Geolocation not supported";
       return;
