@@ -12,6 +12,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/e9ee1fabef.js" crossorigin="anonymous"></script>
     
     <!-- maps integration  -->
     <link
@@ -29,8 +30,7 @@
    <!-- Adding an image banner and including the Title, Location, and Dates inside  -->
     <div class="Log">
         <div class="banner-container">
-          <button class="back-button" onclick="history.back()">Back</button>
-
+          <span class="back-button" onclick="history.back()"><i class="fa-solid fa-chevron-left"></i></span>
           <div class="banner-content">
             <input
               type="text"
@@ -50,21 +50,16 @@
               class="data-input"
               placeholder="Dates of Trip"
             />
-            <div class="banners">
-              <!-- <button id="addBannerBtn" class="add-banner-btn">
-            + Add Photo Banner
-            </button> -->
-             <input
+            <input
               type="text"
               id="banner"
               class="data-input"
               placeholder="Banner URL here. . ."
             />
-            </div>
         </div>
       </div>
 
-      <div class="fields">
+      <div class="fields section">
          <div class="note-wrapper box">
           <h2>Notes</h2>
           <textarea
@@ -79,13 +74,17 @@
           <input
             type="url"
             id="photo"
-            multiple
+            class="photo-input"
           />
-          <button> + Add Photo</button>
-          <div class="photos-box">
+          <button class="submit-button"><i class="fa-solid fa-chevron-right"></i></button>
+          <div class="photos-box" id="addPhotosBtn" class="add-photos-btn">
             <div class="photos" id="photoDisplay">
             </div>
           </div>
+<!-- 
+        <button id="addPhotosBtn" class="add-photos-btn">
+          + Add More Photos
+        </button> -->
       </div>
 
       <div class="itinerary box">
@@ -95,7 +94,7 @@
           class="data-input"
           placeholder="Type your itinerary..."
         ></textarea>        
-        <button id="shareItineraryBtn" class="share-itinerary-btn">
+        <!-- <button id="shareItineraryBtn" class="share-itinerary-btn">
           Share Itinerary
         </button>
 
