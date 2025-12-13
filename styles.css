@@ -1,17 +1,19 @@
 /* universal */
 .back-button {
-  background-color: #bed2e9;
+  background-color: rgb(51, 118, 173);
   color: #274c77;
   padding: 10px 20px 10px 20px;
   border-radius: 20px;
   transition: .3s;
+  z-index: 2;
+  position: absolute;
 }
 
 .back-button:hover{
-  background-color: rgb(51, 118, 173);
+  background-color: #bed2e9;
   cursor: pointer;
   transition: .3s ease-in-out;
-  color: #bed2e9;
+  color: rgb(51, 118, 173);
 }
 
 .submit-button{
@@ -359,6 +361,15 @@ margin-left: 10%;
   font-size:2em;
   border-color: transparent;
   padding: 0.5em;
+  transition: .3s;
+}
+
+.save-entry-btn:hover{
+  background-color: #bed2e9;
+  color: rgb(51, 118, 173);
+  font-size: 3em;
+  padding-top: 0.2em;
+  transition: .3s ease-in-out;
 }
 
 #map,
@@ -370,6 +381,14 @@ margin-left: 10%;
 }
 
 /* for page3: (View Log Page) */
+
+.edit-log{
+  float: right;
+  background-color: #bed2e9;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  color: rgb(51, 118, 173);
+}
 
 /* Media Queries 
 DOUBLE CHECK THIS*/

@@ -30,11 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (backBtn) {
-    backBtn.addEventListener("click", function () {
-      window.location.href = "index.html";
-    });
-  }
 
   // Set up the map for view page
   var mapDiv = document.querySelector("#mapView");
