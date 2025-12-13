@@ -100,7 +100,7 @@ button {
   overflow-x: hidden;
 }
 .banner-container {
-  background-image: url("./main-photo.jpg");
+  /* i dont know if we want a color/image background */
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
