@@ -40,8 +40,8 @@ const locDisplay = document.querySelector("#locationDisplay");
 getLocBtn.addEventListener("click", () => {
   if (!navigator.geolocation) {
     locStatus.textContent = "Geolocation not supported";
-    return;
-  }
+    return;}
+  
 
   locStatus.textContent = "Requesting location...";
 
@@ -57,13 +57,13 @@ getLocBtn.addEventListener("click", () => {
 //       locStatus.textContent = "Unable to retrieve location";
 //     }
 //   );
-// });
+});
 
 // maps-integration
 
-var travelMap = null;
+  var travelMap = null;
 
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
   var mapDiv = document.querySelector("#map");
 
   if (mapDiv) {
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       attribution: "© OpenStreetMap contributors",
     }).addTo(travelMap);
   }
-});
+  });
 
 // Location lookup + connect to the map
 document.addEventListener("DOMContentLoaded", function () {
