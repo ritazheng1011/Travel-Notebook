@@ -73,24 +73,43 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  //displaying banner
-const params = new URLSearchParams(window.location.search);
-const tripId = parseInt(params.get("id"), 10);
+  //displaying banner + info
+  const params = new URLSearchParams(window.location.search);
+  const tripId = parseInt(params.get("id"), 10);
 
-const log = logs.find(item => item.id === tripId);
-if (log && log.banner) {
-  const bannerElement = document.querySelector(".trip-banner");
-  if (bannerElement) {
-    bannerElement.style.setProperty("--banner-url", `url("${log.banner}")`);
+  const log = logs.find(item => item.id === tripId);
+  if (log && log.banner) {
+    const bannerElement = document.querySelector(".trip-banner");
+    if (bannerElement) {
+      bannerElement.style.setProperty("--banner-url", `url("${log.banner}")`);
+    } // have to set as a CSS variable in order to be read
   }
-}
 
-// displaying log infor
-const titleDisplay = document.querySelector(".title-display");
+//could probably make a loop for all this if somebody wants to
+  const titleDisplay = document.querySelector(".title-display");
   if (titleDisplay) {
-    titleDisplay.textContent = "Hello";
+    titleDisplay.textContent = log.title;
   }
 
+  const locationDisplay = document.querySelector(".location-display");
+  if (locationDisplay) {
+    locationDisplay.textContent = log.location;
+  }
+
+  const dateDisplay = document.querySelector(".date-display");
+  if (dateDisplay) {
+    dateDisplay.textContent = log.dates;
+  }
+
+  const noteDisplay = document.querySelector(".notes-display");
+  if (noteDisplay) {
+    noteDisplay.textContent = log.notes;
+  }
+
+  const itineraryDisplay = document.querySelector(".itinerary-display");
+  if (itineraryDisplay) {
+    itineraryDisplay.textContent = log.itinerary;
+  }
 
   if (
     viewMap &&

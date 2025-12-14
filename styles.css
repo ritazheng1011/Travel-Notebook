@@ -179,7 +179,7 @@ textarea {
 
 .data-input {
   font-size: 1.3em;
-  width: 85%;
+  width: 90%;
 }
 
 .data-input::placeholder,
@@ -423,15 +423,42 @@ h2 {
   font-weight: bold;
 }
 
-.title-display > i{
+.title-display > div > i{
   margin: auto 0.3em auto 0;
 }
 
-.banner-display > p{
+.information-section{
+  display: flex;
+  transition: .3s;
+}
+
+.information-section:hover{
+  font-size: 1.2em;
+  transition: .3s ease-in-out;
+}
+
+.information-display > div > p{
   background-color: #bed2e9;
   border-radius: 20px;
-  padding: 10px;
+  font-size: 1.5em;
+  padding: 0.2em 0.2em 0.2em 1.5em;
+  margin: 10px 10px 10px 10px;
+  width: 100%;
   color:rgb(51, 118, 173);
+}
+
+.information-display > div > i{
+  margin: auto 1em auto 0;
+}
+
+.notes-display, .itinerary-display{
+  width: 100%;
+  background-color: #bed2e9;
+  border-radius: 20px;
+  color:rgb(51, 118, 173);
+  height: 20em;
+  padding: 1em 1em 1em 1em;
+  white-space: pre-line;
 }
 
 /* Media Queries 

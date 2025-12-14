@@ -40,10 +40,10 @@ export class LogDisplay extends LitElement {
         background-color:rgba(3, 23, 58, 0.5);
         border-radius: 20px 20px 20px 20px;
     }
+    
     .log-display-img{
         width: 100%;
         min-width: 200px;
-        
     }
 
     .open-log{
@@ -96,7 +96,8 @@ export class LogDisplay extends LitElement {
             <p class="log-date">${this.date}</p>
             <img class="log-display-img" alt="Main trip photo" src="${this.photo}"/>
             <button class="open-log" 
-            @click=${() => window.location = `./page3.html?id=${this.id}`}> >            </button>
+            @click=${() => window.location = `./page3.html?id=${this.id}`}> >            
+          </button>
           </div>
     </div>
     `;
