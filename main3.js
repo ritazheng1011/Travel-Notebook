@@ -22,11 +22,45 @@ var viewMap = null;
 document.addEventListener("DOMContentLoaded", function () {
   var editBtn = document.querySelector("#editLogBtn");
   var backBtn = document.querySelector("#backBtnPage3");
+  var deleteBtn = document.querySelector("#deleteLogBtn");
 
   // Navigation buttons
   if (editBtn) {
     editBtn.addEventListener("click", function () {
       window.location.href = "page2.html";
+    });
+  }
+
+  //NEW DELETE BUTTON FUNCTION
+  if (deleteBtn) {
+    deleteBtn.addEventListener("click", function () {
+      var ok = window.confirm(
+        "Are you sure you want to delete the log? This cannot be undone."
+      );
+      if (!ok) return;
+
+      var params = new URLSearchParams(window.location.search);
+      var indexStr = params.get("index");
+      var index = indexStr === null ? 0 : Number(indexStr);
+
+      var dbJSON = localStorage.getItem("database") || "[]";
+      var db;
+
+      try {
+        db = JSON.parse(dbJSON);
+      } catch (e) {
+        db = [];
+      }
+
+      if (!Number.isInteger(index) || index < 0 || index >= db.length) {
+        alert("Unable to delete log.");
+        return;
+      }
+
+      db.splice(index, 1);
+      localStorage.setItem("database", JSON.stringify(db));
+
+      window.location.href = "index.html";
     });
   }
 
@@ -42,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }).addTo(viewMap);
   }
 
-  var logsJSON = localStorage.getItem("logs");
+  var logsJSON = localStorage.getItem("database");
   if (!logsJSON) {
     return;
   }
@@ -58,7 +92,15 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  var log = logs[0];
+  var params2 = new URLSearchParams(window.location.search);
+  var indexStr2 = params2.get("index");
+  var idx = indexStr2 === null ? 0 : Number(indexStr2);
+
+  if (!Number.isInteger(idx) || idx < 0 || idx >= logs.length) {
+    idx = 0;
+  }
+
+  var log = logs[idx];
 
   if (
     viewMap &&

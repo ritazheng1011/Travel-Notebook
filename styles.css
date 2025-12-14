@@ -390,6 +390,20 @@ h2 {
   color: rgb(51, 118, 173);
 }
 
+.delete-log {
+  float: right;
+  background-color: #bed2e9;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: rgb(51, 118, 173);
+  margin-right: 10px;
+}
+
+.delete-log:hover {
+  background-color: rgb(51, 118, 173);
+  color: #bed2e9;
+}
+
 /* Media Queries 
 DOUBLE CHECK THIS*/
 
