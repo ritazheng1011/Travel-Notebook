@@ -1,17 +1,19 @@
 /* universal */
 .back-button {
-  background-color: #bed2e9;
+  background-color: rgb(51, 118, 173);
   color: #274c77;
   padding: 10px 20px 10px 20px;
   border-radius: 20px;
   transition: 0.3s;
+  z-index: 2;
+  position: absolute;
 }
 
 .back-button:hover {
-  background-color: rgb(51, 118, 173);
+  background-color: #bed2e9;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  color: #bed2e9;
+  color: rgb(51, 118, 173);
 }
 
 .submit-button {
@@ -37,9 +39,6 @@
 /* For index.html (Home Page) */
 * {
   box-sizing: border-box;
-}
-
-body {
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -134,7 +133,6 @@ button {
 .Log {
   gap: 0px 0px;
   border: #274c77;
-  border-bottom: #050827;
   border-width: 5px 0 5px 5px;
   border-style: solid;
   width: 80vw;
@@ -216,7 +214,7 @@ textarea {
 .box {
   width: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   padding-right: 1rem 2rem 1rem 1rem;
 }
 
@@ -273,12 +271,6 @@ textarea {
   padding-right: 1em;
 }
 
-.add-banner-btn {
-  float: right;
-  width: 30%;
-  border-right: transparent;
-}
-
 .trip-title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -292,12 +284,6 @@ textarea {
 .trip-dates {
   font-size: 1rem;
   font-weight: 400;
-}
-
-.main-image img {
-  width: 180px;
-  height: auto;
-  display: block;
 }
 
 h2 {
@@ -342,8 +328,7 @@ h2 {
 }
 
 .photos img {
-  width: 100%;
-  height: 110px;
+  width: 180px;
   object-fit: cover;
   display: block;
   background-color: #bed2e9;
@@ -376,6 +361,15 @@ h2 {
   font-size: 2em;
   border-color: transparent;
   padding: 0.5em;
+  transition: 0.3s;
+}
+
+.save-entry-btn:hover {
+  background-color: #bed2e9;
+  color: rgb(51, 118, 173);
+  font-size: 3em;
+  padding-top: 0.2em;
+  transition: 0.3s ease-in-out;
 }
 
 #map,
@@ -387,6 +381,14 @@ h2 {
 }
 
 /* for page3: (View Log Page) */
+
+.edit-log {
+  float: right;
+  background-color: #bed2e9;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: rgb(51, 118, 173);
+}
 
 /* Media Queries 
 DOUBLE CHECK THIS*/
@@ -408,11 +410,16 @@ DOUBLE CHECK THIS*/
   .new-log-wrapper {
     border-left: none;
     border-top: #274c77 solid 0.4em;
+    border-radius: 0 0 40px 0;
     padding: 1rem 0;
   }
 
   .create-new {
     top: 0;
+  }
+
+  .title {
+    border-radius: 45px 45px 0 0;
   }
 
   .Log {
@@ -423,6 +430,7 @@ DOUBLE CHECK THIS*/
 
   .box {
     padding: 1rem;
+    overflow-y: hidden;
   }
 
   .photos {
