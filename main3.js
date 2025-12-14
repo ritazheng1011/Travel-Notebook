@@ -3,7 +3,6 @@ var viewMap = null;
 
 document.addEventListener("DOMContentLoaded", function () {
   var editBtn = document.querySelector("#editLogBtn");
-  var backBtn = document.querySelector("#backBtnPage3");
   var deleteBtn = document.querySelector("#deleteLogBtn");
 
   // Navigation buttons
@@ -87,7 +86,7 @@ if (log && log.banner) {
 }
 
 // displaying log infor
-const titleDisplay = document.getElementById(".title-display");
+const titleDisplay = document.querySelector(".title-display");
   if (titleDisplay) {
     titleDisplay.textContent = "Hello";
   }

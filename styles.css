@@ -384,7 +384,7 @@ h2 {
 
 /* for page3: (View Log Page) */
 
-.edit-log {
+.edit-log, .delete-log{
   float: right;
   background-color: #bed2e9;
   cursor: pointer;
@@ -393,14 +393,14 @@ h2 {
   height: 2em;
   font-size: 1.5em;
   border-color: transparent;
-  margin-right: 1em;
-  padding-left: 8px;
+  margin: 1em 1em 1em 0;
+  padding-left: 5px;
   padding-top: 5px;
   transition: .3s ease-in-out;
   color: rgb(51, 118, 173);
 }
 
-.edit-log:hover{
+.edit-log:hover , .delete-log:hover{
   background-color: rgb(51, 118, 173);
   color: #bed2e9;
   border-color: transparent;
@@ -416,7 +416,7 @@ h2 {
 }
 
 .title-display{
-  margin-top: 0.5em;
+  margin-top: 0.9em;
   color:#bed2e9;
   display: flex;
   font-size: 3em;
