@@ -546,11 +546,12 @@ DOUBLE CHECK THIS*/
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width:500px) and (max-width: 600px) {
   .wrapper {
     width: 94%;
     height: 75vh;
     border-width: 4px;
+    min-width: 500px;
   }
 
   .Log {
