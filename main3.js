@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (deleteBtn) {
     deleteBtn.addEventListener("click", function () {
       var ok = window.confirm(
-        "Are you sure you want to delete the log? This cannot be undone."
+        "Are you sure you want to delete your log, " + log.title +"? This cannot be undone."
       );
       if (!ok) return;
 
