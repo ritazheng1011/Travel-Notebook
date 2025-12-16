@@ -7,23 +7,23 @@
     "display": "standalone",
     "icons": [
         {
-            "src": "./icons/shield-96.png",
+            "src": "./icons/96x96.png",
             "sizes": "96x96"
         },
         {
-            "src": "./icons/shield-128.png",
+            "src": "./icons/128x128.png",
             "sizes": "128x128"
         },
         {
-            "src": "./icons/shield-192.png",
+            "src": "./icons/192x192.png",
             "sizes": "192x192"
         },
         {
-            "src": "./icons/shield-256.png",
+            "src": "./icons/256x256.png",
             "sizes": "256x256"
         },
         {
-            "src": "./icons/shield-512.png",
+            "src": "./icons/512x512.png",
             "sizes": "512x512"
         }
     ]
